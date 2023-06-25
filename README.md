@@ -1,4 +1,4 @@
-# AWS Quicksight Asset as a bundle.
+# AWS Quicksight Asset Migration as Bundle.
 This repo contains python scripts to perform migration. Import and export of assets.
 
 ## Quicksight Bundle Export and Download
@@ -44,3 +44,8 @@ python quicksight_bundle_export.py
 
 - Make sure you have proper permissions and access to the QuickSight resources you want to export.
 
+## Security
+See CONTRIBUTING for more information.
+
+## License
+This library is licensed under the MIT-0 License. See the LICENSE file.
