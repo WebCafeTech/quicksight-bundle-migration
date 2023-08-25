@@ -17,20 +17,24 @@ This Shell script allows you to export and download resources from Amazon QuickS
 
 2. Install the required shell library:
 ```bash
-pip install boto3
+sudo install jq
+sudo install wget
+sudo install aws cli
+
+chmod 775 ./quicksight_export.sh
 ```
 
 3. Run the script:
 
 ```bash
-shell quicksight_bundle_export.py
+./quicksight_export.sh
 ```
 
 4. Provide the required inputs as prompted:
 
 - Enter your AWS account ID.
 - Enter the desired AWS region.
-- Enter the Quicksight resource ARNs (separated by commas): Enter the ARNS without any quotes. Example: `arn:aws:quicksight:us-east-1:123456789012:analysis/abc123, arn:aws:quicksight:us-east-1:123456789012:dashboard/def456`
+- Enter the Quicksight Dashboard ID: Enter the single dashboardid without any quotes. Example: `dashboard1`
 
 5. The script will initiate the asset bundle export job and provide status updates until the export is completed.
 
