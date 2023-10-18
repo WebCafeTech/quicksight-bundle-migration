@@ -1,40 +1,26 @@
-# AWS Quicksight Asset Migration as Bundle.
-This repo contains python scripts to perform migration. Import and export of assets.
+# AWS Quicksight Asset Migration
+This repo contains shell scripts to perform migration. Import and export of assets using the python and shell scripts.
 
-## Quicksight Bundle Export and Download
+## Objective
+The aim of this repo is to download the already existing quicksight dashboard created using GUI method in JSON format and to deploy it on to different region or different account.
 
-This Python script allows you to export and download resources from Amazon QuickSight, bundling them into a single asset bundle file.
 
 ### Prerequisites
+- AWS CLI configured with appropriate credentials
+- Python or Bash shell
+- jq 
+- wget
 
-- Python 3.x installed
-- AWS CLI configured with appropriate credentials and region
-- Boto3 library installed (`pip install boto3`)
 
-### Usage
+### Idea
+I have created script that follow the sequence of tasks to be performed in an automated fashion.
 
-1. Clone the repository or copy the Python script (`quicksight_bundle_export.py`) to your local machine.
+### Python code
+![Python](./python/README.md)
 
-2. Install the required Python library:
-```bash
-pip install boto3
-```
+### Bash Shell script
+![Shell Script](./shell-scripts/readme.md)
 
-3. Run the script:
-
-```bash
-python quicksight_bundle_export.py
-```
-
-4. Provide the required inputs as prompted:
-
-- Enter your AWS account ID.
-- Enter the desired AWS region.
-- Enter the Quicksight resource ARNs (separated by commas): Enter the ARNS without any quotes. Example: `arn:aws:quicksight:us-east-1:123456789012:analysis/abc123, arn:aws:quicksight:us-east-1:123456789012:dashboard/def456`
-
-5. The script will initiate the asset bundle export job and provide status updates until the export is completed.
-
-6. Once the export is successful, the asset bundle file (`quicksight_bundle.zip`) will be downloaded to the same directory as the script.
 
 ### Additional Notes
 
